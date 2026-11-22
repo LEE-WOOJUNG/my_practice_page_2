@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 첫 웹페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>가을빛 멜로디를 담는 중</h1>
+  <p class="intro">
+    기타 한 대와 계절의 색을 모으고 있어요.<br>
+    오늘의 노래가 당신의 하루에<br>
+    단풍잎 하나처럼 살며시 내려앉기를.
+  </p>
+
+  <!-- 홀로그램 틸트 카드: 마우스를 따라 기울고 무지개빛으로 반짝여요 -->
+  <div class="holo">
+    <div class="holo-shadow"></div>
+    <div class="holo-card">
+      <img src="acoustic-guitar.png" alt="어쿠스틱 기타 사진" draggable="false">
+      <span class="holo-foil"></span>
+      <span class="holo-glare"></span>
+    </div>
+  </div>
+
+  <!-- MP3 플레이어 (loop = 곡이 끝나면 처음부터 반복) -->
+  <div class="player" role="group" aria-label="배경음악 플레이어">
+    <audio id="bgm" src="bgm.mp3" loop preload="auto"></audio>
+    <p class="player-title"><span class="note" aria-hidden="true">♪</span>Contented Game Loop</p>
+
+    <div class="player-progress">
+      <span class="time-now">0:00</span>
+      <input class="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="재생 위치">
+      <span class="time-total">0:00</span>
+    </div>
+
+    <div class="player-controls">
+      <button class="stop-btn" type="button" aria-label="정지">⏹</button>
+      <button class="play-btn" type="button" aria-label="재생">▶</button>
+      <button class="mute-btn" type="button" aria-label="소리 끄기" aria-pressed="false">🔊</button>
+    </div>
+  </div>
+
+  <p>
+    <a class="email" href="mailto:mylaughter72@gmail.com">mylaughter72@gmail.com</a>
+  </p>
+
+  <div class="social">
+    <!-- 아래 주소를 내 유튜브 채널 주소로 바꾸세요 -->
+    <a class="glow-btn youtube-btn" href="https://www.youtube.com/" target="_blank" rel="noopener">
+      <span class="inner"><span class="label">▶ 내 유튜브 보러가기</span></span>
+    </a>
+
+    <!-- 아래 주소를 내 인스타그램 주소로 바꾸세요 -->
+    <a class="glow-btn insta-btn" href="https://www.instagram.com/" target="_blank" rel="noopener">
+      <span class="inner"><span class="label">📷 내 인스타그램 보러가기</span></span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
